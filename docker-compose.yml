@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  nestapp:
+    container_name: nestapp-container
+    image: kathir/nestapp:latest
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASS=zurich
+      - DB_NAME=MOTOR_INSURANCE_WEBSITE
+      - SECRET_KEY=s/%<cD}mdyej+9@VtU!h3pgj6Qim;()*
+    depends_on:
+      - db
+  db:
+    container_name: db
+    image: postgres:14
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=zurich
+      - POSTGRES_DB=MOTOR_INSURANCE_WEBSITE
+    volumes:
+      - db_data:/var/lib/postgresql/data
+volumes:
+  db_data: {}
