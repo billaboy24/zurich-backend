@@ -140,7 +140,6 @@ export class ProductController {
           HttpStatus.NOT_FOUND,
         );
       }
-      throw new HttpException('Product deleted', HttpStatus.OK);
     } catch (error) {
       console.log(error);
       throw new HttpException(
