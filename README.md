@@ -45,7 +45,9 @@ $ npm run test:cov
 # Install pgadmin and setup database accordingly to run in local environment.
 ```
 
-## RECOMMENDED METHOD(This application have been dockerized.)
+## RECOMMENDED METHOD
+
+# (This application have been dockerized.)
 
 ```bash
 
@@ -73,14 +75,23 @@ $ docker compose up
 
 ```
 
-## DATABASE(Name is MOTOR_INSURANCE_WEBSITE and Table name is Product as per requirement)
+## DATABASE
+
+# (Name is MOTOR_INSURANCE_WEBSITE and Table name is Product as per requirement)
 
 ```bash
 # By default,the database is empty.Please create product to utilize all the endpoints.DONT   FORGET TO GENERATE TOKEN AS ADMIN ROLE to create a new product.
 
 ```
 
-## ENDPOINTS(http://localhost:3000/api-docs#) Swagger is implemented as per requirement.
+## ENDPOINTS
+
+# Swagger is implemented as per requirement
+
+```bash
+# http://localhost:3000/api-docs# (to access swagger)
+
+```
 
 ## MIDDLEWARES
 
@@ -92,7 +103,9 @@ $ docker compose up
 
 ```
 
-## CONTROLLERS AND PROVIDERS(Has one of each as per requirement)
+## CONTROLLERS AND PROVIDERS
+
+# (Has one of each as per requirement)
 
 ```bash
 
@@ -109,11 +122,15 @@ $ docker compose up
 
 ```
 
-# ORM (TypeORM is used as per requirement)
+## ORM
+
+# (TypeORM is used as per requirement)
 
 ```bash
 # ORM is used to avoid traditional method databases SQL queries and for better maintainability for sure.
 
 ```
 
-# JEST(Unit tests has been implemented for some part of the coding )
+## JEST
+
+# (Unit tests has been implemented for some part of the coding )
