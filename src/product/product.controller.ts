@@ -8,7 +8,6 @@ import {
   Body,
   HttpException,
   HttpStatus,
-  HttpCode,
   UseGuards,
 } from '@nestjs/common';
 import { ProductService } from './product.service';
@@ -132,7 +131,6 @@ export class ProductController {
   @ApiResponse({ status: 403, description: 'Unauthorized request' })
   @ApiResponse({ status: 404, description: 'Product not found' })
   @ApiResponse({ status: 500, description: 'Internal Server Error' })
-  @HttpCode(HttpStatus.OK)
   async deleteProduct(@Param() params: UpdateProductID): Promise<void> {
     try {
       const deleteProduct = await this.productService.delete(params);
@@ -142,6 +140,7 @@ export class ProductController {
           HttpStatus.NOT_FOUND,
         );
       }
+      throw new HttpException('Product deleted', HttpStatus.OK);
     } catch (error) {
       console.log(error);
       throw new HttpException(
