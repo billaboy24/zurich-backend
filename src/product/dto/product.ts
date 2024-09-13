@@ -57,14 +57,14 @@ export class UpdateProductID {
 export class UpdateProduct {
   @ApiProperty({
     description: 'The location of vehicle',
-    example: 'South Malaysia',
+    example: 'North Malaysia',
     required: true,
   })
   @IsString()
   location: string;
   @ApiProperty({
     description: 'The price of the product',
-    example: '199.99',
+    example: '399',
     required: true,
   })
   @IsString()
