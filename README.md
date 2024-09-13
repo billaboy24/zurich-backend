@@ -13,6 +13,8 @@ $ npm install
 ## Compile and run the project
 
 ```bash
+# usage of linter
+$ npm run lint
 # development
 $ npm run start
 
