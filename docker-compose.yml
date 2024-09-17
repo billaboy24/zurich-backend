@@ -7,13 +7,8 @@ services:
     build: .
     ports:
       - 3000:3000
-    environment:
-      - DB_HOST=db
-      - DB_PORT=5432
-      - DB_USER=postgres
-      - DB_PASS=zurich
-      - DB_NAME=MOTOR_INSURANCE_WEBSITE
-      - SECRET_KEY=s/%<cD}mdyej+9@VtU!h3pgj6Qim;()*
+    env_file:
+      - .env
     depends_on:
       - db
   db:
@@ -22,9 +17,9 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=zurich
-      - POSTGRES_DB=MOTOR_INSURANCE_WEBSITE
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
     volumes:
       - db_data:/var/lib/postgresql/data
 volumes:
