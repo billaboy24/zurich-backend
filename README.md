@@ -67,11 +67,11 @@ $ docker compose up
   "username": "Sample",
   "role": "Guest" || "Admin"
 }
-# Secret key is in the docker compose script and it is not encoded to base64.
+# Secret key is not encoded to base64.
 # All api endpoint requires token authentication
 # Use swagger authorize to add in your bearer token after generated.
 
-# To save up your time,here you go token for both role:
+
 
 ```
 
